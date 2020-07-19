@@ -16,6 +16,15 @@ const onwarn = (warning, onwarn) =>
     /[/\\]@sapper[/\\]/.test(warning.message)) ||
   onwarn(warning)
 
+const preprocess = sveltePreprocess({
+  postcss: {
+    plugins: [
+      require('postcss-import')(),
+      require('postcss-nested')()
+    ]
+  }
+});
+
 export default {
   client: {
     input: config.client.input(),
@@ -27,6 +36,7 @@ export default {
       }),
       svelte({
         dev,
+        preprocess,
         hydratable: true,
         emitCss: true,
       }),
@@ -37,33 +47,33 @@ export default {
       commonjs(),
 
       legacy &&
-        babel({
-          extensions: ['.js', '.mjs', '.html', '.svelte'],
-          babelHelpers: 'runtime',
-          exclude: ['node_modules/@babel/**'],
-          presets: [
-            [
-              '@babel/preset-env',
-              {
-                targets: '> 0.25%, not dead',
-              },
-            ],
+      babel({
+        extensions: ['.js', '.mjs', '.html', '.svelte'],
+        babelHelpers: 'runtime',
+        exclude: ['node_modules/@babel/**'],
+        presets: [
+          [
+            '@babel/preset-env',
+            {
+              targets: '> 0.25%, not dead',
+            },
           ],
-          plugins: [
-            '@babel/plugin-syntax-dynamic-import',
-            [
-              '@babel/plugin-transform-runtime',
-              {
-                useESModules: true,
-              },
-            ],
+        ],
+        plugins: [
+          '@babel/plugin-syntax-dynamic-import',
+          [
+            '@babel/plugin-transform-runtime',
+            {
+              useESModules: true,
+            },
           ],
-        }),
+        ],
+      }),
 
       !dev &&
-        terser({
-          module: true,
-        }),
+      terser({
+        module: true,
+      }),
     ],
 
     preserveEntrySignatures: false,
@@ -81,6 +91,7 @@ export default {
       svelte({
         generate: 'ssr',
         dev,
+        preprocess
       }),
       resolve({
         dedupe: ['svelte'],
@@ -89,7 +100,7 @@ export default {
     ],
     external: Object.keys(pkg.dependencies).concat(
       require('module').builtinModules ||
-        Object.keys(process.binding('natives'))
+      Object.keys(process.binding('natives'))
     ),
 
     preserveEntrySignatures: 'strict',
