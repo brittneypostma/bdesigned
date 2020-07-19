@@ -4,7 +4,7 @@
 
 <h1>Great success!</h1>
 
-<figure>
+<figure class="grid justify-center">
   <img alt="Success Kid" src="successkid.jpg" />
   <figcaption>Have fun with Sapper!</figcaption>
 </figure>
