@@ -15,6 +15,10 @@ module.exports = {
       gray: "#333333",
       black: "#000000"
     },
+    fontFamily: {
+      heading: "'Pacifico', cursive",
+      body: "'Quicksand', sans-serif",
+    },
     extend: {},
   },
   variants: {},

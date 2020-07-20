@@ -11,7 +11,7 @@ body,
   @apply overflow-x-hidden;
 }
 
-/* body {
+body {
   @apply font-body;
   @apply overflow-x-hidden;
   @apply max-w-full;
@@ -22,7 +22,7 @@ h2,
 h3,
 h4 {
   @apply font-heading;
-} */
+}
 
 h1 {
   @apply text-6xl;
@@ -38,6 +38,15 @@ h3 {
 
 h4 {
   @apply text-3xl;
+}
+
+button { 
+  background: radial-gradient(128.2% 109.41% at 18.75% 15.91%, #00E0FF 0%, #00789E 100%);
+  @apply shadow-md;
+  @apply text-white;
+  @apply rounded-full;
+  @apply px-5;
+  @apply py-2;
 }
 
 @tailwind components;
