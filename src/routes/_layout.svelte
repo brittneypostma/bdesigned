@@ -1,10 +1,8 @@
 <script>
-  import Nav from '../components/Nav.svelte'
-
-  export let segment
+  import Header from '../components/Header.svelte'
 </script>
 
-<Nav {segment} />
+<Header />
 
 <main>
   <slot />

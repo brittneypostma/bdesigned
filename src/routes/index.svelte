@@ -25,7 +25,7 @@
   <title>bDesigned | Home</title>
 </svelte:head>
 
-<div class="bg w-screen text-blue">
+<div class="bg w-screen text-teal">
   <div class="main-text text grid justify-center items-center content-center">
     <p class="text-2xl">HELLO!</p>
     <h1 class="text-teal">I'm Brittney,</h1>
@@ -38,10 +38,10 @@
 <style>
   .bg {
     background: url('/wave.png') no-repeat fixed bottom right;
-    height: calc(100vh - 57px);
+    height: calc(100vh - 100px);
   }
 
   .main-text {
-    height: calc(100vh - 57px);
+    height: calc(100vh - 100px);
   }
 </style>

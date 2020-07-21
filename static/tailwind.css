@@ -13,6 +13,7 @@ body,
 
 body {
   @apply font-body;
+  @apply leading-tight;
   @apply overflow-x-hidden;
   @apply max-w-full;
 }
@@ -22,6 +23,7 @@ h2,
 h3,
 h4 {
   @apply font-heading;
+  @apply leading-tight;
 }
 
 h1 {
@@ -49,5 +51,17 @@ button {
   @apply py-2;
 }
 
+a {
+  @apply uppercase;
+}
+
+a:hover {
+  @apply text-light-teal;
+}
+
 @tailwind components;
 @tailwind utilities;
+
+/* .text-shadow {
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.5);
+} */
