@@ -66,9 +66,6 @@ button:focus {
 @tailwind utilities;
 
 :root {
-  --primary: #fff;
-  --secondary: #AEEADE;
-  --text-color: #00789E;
   --white: #fff;
   --mint: #AEEADE;
   --light-blue: #E8F4F4;
@@ -82,14 +79,16 @@ button:focus {
   --navy: #1B2A49;
   --gray: #333333;
   --black: #000000;
+  
+  --primary: var(--white);
+  --secondary: var(--mint);
+  --text-color: var(--teal);
 }
 
 [data-theme="dark"] {
   --primary: var(--medium-blue);
   --secondary: var(--navy);
   --text-color: var(--light-blue);
-  --bg: #333;
-  --heading: rgb(155, 50, 43);
 }
 
 .center {
