@@ -1,15 +1,30 @@
 <script>
   import Nav from './Nav.svelte'
+  import Toggle from './Toggle.svelte'
   export let segment
 </script>
 
-<header class="flex justify-between items-center w-full px-10">
+<header
+  class="shadow-inset fixed top-0 w-full h-100 flex justify-between items-center
+  bg px-10"
+>
   <img src="logo-full.png" alt="bDesigned logo" />
-  <Nav {segment} />
+  <div class="absolute top-50 center flex items-center">
+
+    <Nav {segment} />
+  </div>
+  <div>
+    <Toggle />
+  </div>
+
 </header>
 
 <style>
-  header {
-    height: 100px;
+  .bg {
+    background: linear-gradient(
+      180deg,
+      var(--medium-blue) 0%,
+      var(--navy) 100%
+    );
   }
 </style>

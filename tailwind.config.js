@@ -3,8 +3,9 @@ module.exports = {
   theme: {
     colors: {
       white: "#ffffff",
-      sand: "EBE4DC",
+      sand: "#EBE4DC",
       "light-blue": "#E8F4F4",
+      "medium-blue": "#465881",
       mint: "#AEEADE",
       caribbean: "#00E0FF",
       blue: "#5FC7E4",
@@ -19,7 +20,17 @@ module.exports = {
       heading: "'Pacifico', cursive",
       body: "'Quicksand', sans-serif",
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        inset: 'inset 0px -5px 10px rgba(0, 0, 0, 0.25)'
+      },
+      height: {
+        100: "100px"
+      },
+      inset: {
+        50: "50px"
+      }
+    },
   },
   variants: {},
   plugins: [],

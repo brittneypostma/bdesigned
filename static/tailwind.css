@@ -16,6 +16,8 @@ body {
   @apply leading-tight;
   @apply overflow-x-hidden;
   @apply max-w-full;
+  background: linear-gradient(var(--primary), var(--secondary));
+  color: var(--text-color);
 }
 
 h1,
@@ -44,24 +46,54 @@ h4 {
 
 button { 
   background: radial-gradient(128.2% 109.41% at 18.75% 15.91%, #00E0FF 0%, #00789E 100%);
-  @apply shadow-md;
+  transition: all 0.3s linear;
+  @apply shadow-xl;
   @apply text-white;
   @apply rounded-full;
   @apply px-5;
   @apply py-2;
 }
 
-a {
-  @apply uppercase;
+button:hover {
+  @apply shadow-sm;
 }
 
-a:hover {
-  @apply text-light-teal;
+button:focus {
+  @apply shadow-outline;
 }
 
 @tailwind components;
 @tailwind utilities;
 
-/* .text-shadow {
-  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.5);
-} */
+:root {
+  --primary: #fff;
+  --secondary: #AEEADE;
+  --text-color: #00789E;
+  --white: #fff;
+  --mint: #AEEADE;
+  --light-blue: #E8F4F4;
+  --medium-blue: #465881;
+  --mint: #AEEADE;
+  --caribbean: #00E0FF;
+  --blue: #5FC7E4;
+  --light-teal: #68D2C8;
+  --teal: #00789E;
+  --yellow: #E5A91E;
+  --navy: #1B2A49;
+  --gray: #333333;
+  --black: #000000;
+}
+
+[data-theme="dark"] {
+  --primary: var(--medium-blue);
+  --secondary: var(--navy);
+  --text-color: var(--light-blue);
+  --bg: #333;
+  --heading: rgb(155, 50, 43);
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
