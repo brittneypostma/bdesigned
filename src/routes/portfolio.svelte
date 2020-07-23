@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>bDesigned | Portfolio</title>
+  <title>Portfolio | bDesigned</title>
 </svelte:head>
 
 <h1>About this site</h1>

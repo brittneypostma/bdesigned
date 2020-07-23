@@ -22,11 +22,11 @@
 </script>
 
 <svelte:head>
-  <title>bDesigned | Home</title>
+  <title>Home | bDesigned</title>
 </svelte:head>
 
 <div class="wrapper w-screen">
-  <div class="waves hidden md:inline-block">
+  <div class="waves hidden sm:inline-block">
     <svg
       width="100%"
       height="300px"
@@ -64,12 +64,16 @@
     </svg>
   </div>
 
-  <div class="text text-wrapper grid justify-center content-center w-full">
-    <p class="text-2xl">HELLO!</p>
-    <h1 class="text">I'm Brittney,</h1>
-    <p class="text-2xl">owner of bDesigned.</p>
-    <p class="text-5xl">I'm a {changingText[idx]}</p>
-    <button class="text-2xl cursor-pointer">SEE MY WORK</button>
+  <div
+    class="px-4 sm:px-0 text-wrapper grid justify-center content-center w-full"
+  >
+    <p class="sm:text-2xl">HELLO!</p>
+    <h1 class="mb-4 xs:mb-0 text-6xl">I'm Brittney,</h1>
+    <p class="sm:text-2xl">owner of bDesigned.</p>
+    <p class="text-4xl sm:text-5xl">I'm a {changingText[idx]}</p>
+    <a href="portfolio">
+      <button class="text-2xl cursor-pointer w-full">SEE MY WORK</button>
+    </a>
   </div>
 </div>
 
@@ -82,11 +86,6 @@
     height: calc(100vh - 100px);
     color: var(--text-color);
   }
-
-  /* .bg {
-    background: url('/wave.png') no-repeat;
-    height: 481px;
-  } */
 
   .waves {
     width: 100%;

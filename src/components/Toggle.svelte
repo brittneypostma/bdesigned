@@ -39,19 +39,20 @@
 
 <style>
   .slider-img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
 
   .theme-switch-wrapper {
+    margin: 0 auto;
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin: 10px 2em auto auto;
   }
 
   .theme-switch {
     display: inline-block;
-    height: 34px;
+    height: 25px;
     position: relative;
     width: 60px;
   }
@@ -74,17 +75,13 @@
 
   .slider:before {
     background-color: #e5a91e;
-    bottom: 4px;
+    bottom: 3px;
     content: '';
-    height: 26px;
+    height: 18px;
+    width: 18px;
     left: 4px;
     position: absolute;
     transition: all 0.4s linear;
-    width: 26px;
-  }
-
-  .slider:hover::before {
-    transform: translateX(13px);
   }
 
   .slider:hover {
@@ -100,11 +97,11 @@
   }
 
   input:checked + .slider:before {
-    transform: translateX(26px);
+    transform: translateX(30px);
   }
 
   input:hover + .slider:before {
-    transform: translateX(13px);
+    transform: translateX(15px);
   }
 
   .slider.round {
@@ -113,42 +110,5 @@
 
   .slider.round:before {
     border-radius: 50%;
-  }
-
-  @media only screen and (max-width: 500px) {
-    input:hover + .slider:before {
-      transform: none;
-    }
-
-    .slider:hover::before {
-      transform: none;
-    }
-
-    .slider-img {
-      width: 20px;
-      height: 20px;
-    }
-
-    .theme-switch {
-      display: inline-block;
-      height: 20px;
-      position: relative;
-      width: 50px;
-    }
-
-    .slider:before {
-      background-color: #fff;
-      bottom: 3px;
-      content: '';
-      height: 15px;
-      left: 4px;
-      position: absolute;
-      transition: all 0.4s linear;
-      width: 15px;
-    }
-    .theme-switch-wrapper {
-      top: 7px;
-      position: relative;
-    }
   }
 </style>

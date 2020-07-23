@@ -1,11 +1,41 @@
 <script>
+  import Toggle from './Toggle.svelte'
   export let segment
+  let clicked = false
 </script>
 
 <nav>
-  <ul class="flex">
+  <input
+    type="checkbox"
+    id="nav-check"
+    class="hidden"
+    bind:checked="{clicked}"
+    on:click="{() => (clicked = !clicked)}"
+  />
+  <div class="nav-btn flex item">
+    <label for="nav-check">
+      <img
+        src="hamburger.svg"
+        alt="nav menu button"
+        class="lg:hidden cursor-pointer"
+      />
+    </label>
+  </div>
+
+  <ul
+    class="{clicked ? 'absolute right-50 grid justify-center content-center bg-navy rounded-lg pb-8 px-4' : 'hidden lg:flex'}"
+  >
     <li>
       <a class="{segment === undefined ? 'page' : 'selected'}" href=".">home</a>
+    </li>
+    <li>
+      <a
+        rel="prefetch"
+        class="{segment === 'about' ? 'page' : 'selected'}"
+        href="about"
+      >
+        about
+      </a>
     </li>
     <li>
       <a
@@ -25,16 +55,30 @@
         blog
       </a>
     </li>
-
     <li>
       <a class="{segment === 'contact' ? 'page' : 'selected'}" href="contact">
         contact
       </a>
     </li>
+    <Toggle />
   </ul>
 </nav>
 
 <style>
+  #nav-check:checked ~ ul {
+    animation: slide 0.3s linear;
+  }
+
+  @keyframes slide {
+    from {
+      opacity: 0;
+      top: -200px;
+    }
+    to {
+      opacity: 1;
+      top: 50px;
+    }
+  }
   a {
     color: #e8f4f4;
     text-decoration: none;

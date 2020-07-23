@@ -62,6 +62,10 @@ button:focus {
   @apply shadow-outline;
 }
 
+p {
+  @apply text-xl;
+}
+
 @tailwind components;
 @tailwind utilities;
 

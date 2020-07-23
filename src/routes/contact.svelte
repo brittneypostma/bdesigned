@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>bDesigned | Contact</title>
+  <title>Contact | bDesigned</title>
 </svelte:head>
 
 <h1>About this site</h1>
