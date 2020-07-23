@@ -12,7 +12,7 @@
   <img
     src="me.png"
     alt="Brittney"
-    class="rounded-full lg:float-left mt-10 lg:m-12"
+    class="rounded-full shadow-outline lg:float-left mt-10 lg:m-12"
   />
   <p>
     Hi, I'm Brittney and I'm the developer and designer behind bDesigned. I love
