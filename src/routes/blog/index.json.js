@@ -1,18 +1,35 @@
-import posts from './_posts.js'
+import fs from 'fs'
+import path from 'path'
+import marked from 'marked'
+import grayMatter from 'gray-matter'
 
-const contents = JSON.stringify(
-  posts.map((post) => {
+function getAllPosts(filesPath) {
+  const data = fs.readdirSync(filesPath).map(fileName => {
+    const post = fs.readFileSync(path.resolve(filesPath, fileName), 'utf-8')
+
+    // Parse Front matter from string
+    const { data, content } = grayMatter(post)
+
+    // Turns markdown into html
+    const renderer = new marked.Renderer()
+    const html = marked(content, { renderer })
+
+    // Builds data
     return {
-      title: post.title,
-      slug: post.slug,
+      html,
+      slug: fileName.substring(0, fileName.length - 3),
+      ...data
     }
   })
-)
+  return data
+}
 
 export function get(req, res) {
+  const posts = getAllPosts('src/posts')
+
   res.writeHead(200, {
-    'Content-Type': 'application/json',
+    'Content-Type': 'application/json'
   })
 
-  res.end(contents)
+  res.end(JSON.stringify(posts))
 }

@@ -21,21 +21,13 @@
   <title>{post.title}</title>
 </svelte:head>
 
-<h1>{post.title}</h1>
-
-<div class="content">
+<div class="content p-0 md:p-12 max-w-6xl mx-auto">
+  <a href="blog">go back</a>
+  <h1 class="my-6 md:mt-6 md:mb-12">{post.title}</h1>
   {@html post.html}
 </div>
 
 <style>
-  /*
-		By default, CSS is locally scoped to the component,
-		and any unused styles are dead-code-eliminated.
-		In this page, Svelte can't know which elements are
-		going to appear inside the {{{post.html}}} block,
-		so we have to use the :global(...) modifier to target
-		all elements inside .content
-	*/
   .content :global(h2) {
     font-size: 1.4em;
     font-weight: 500;

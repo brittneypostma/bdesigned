@@ -16,23 +16,40 @@
   <title>Blog | bDesigned</title>
 </svelte:head>
 
-<h1>Recent posts</h1>
+<div class="p-12">
+  <h1 class="mb-12">Blog</h1>
 
-<ul>
-  {#each posts as post}
-    <!-- we're using the non-standard `rel=prefetch` attribute to
-				tell Sapper to load the data for the page as soon as
-				the user hovers over the link or taps it, instead of
-				waiting for the 'click' event -->
-    <li>
-      <a rel="prefetch" href="blog/{post.slug}">{post.title}</a>
-    </li>
-  {/each}
-</ul>
+  <ul>
+    {#each posts as post}
+      <li class="rounded-lg leading-relaxed relative bezier">
+        <a rel="prefetch" href="blog/{post.slug}">
+          <img
+            src="{post.image}"
+            alt="{post.alt}"
+            class="rounded-lg object-cover object-center"
+          />
+          <h4>{post.title}</h4>
+          <p>{post.date}</p>
+        </a>
+      </li>
+    {/each}
+  </ul>
+</div>
 
 <style>
-  ul {
-    margin: 0 0 1em 0;
-    line-height: 1.5;
+  img {
+    width: 350px;
+    height: 200px;
+  }
+  /* 
+  li:hover {
+    top: -2px;
+  } */
+  @media only screen and (min-width: 768px) {
+    ul {
+      display: grid;
+      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    }
   }
 </style>

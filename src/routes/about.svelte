@@ -8,7 +8,12 @@
   class="hidden lg:block fixed bottom-0 right-0 z-0"
 />
 <div class="text-wrapper p-12 lg:max-w-md xl:max-w-6xl h-full">
-  <h1>About</h1>
+  <h1>About Me</h1>
+  <img
+    src="me.png"
+    alt="Brittney"
+    class="rounded-full lg:float-left mt-10 lg:m-12"
+  />
   <p>
     Hi, I'm Brittney and I'm the developer and designer behind bDesigned. I love
     developing beautiful, fluid, and responsive websites using new technologies.
