@@ -33,6 +33,19 @@
     once I found my love of coding I combined my 2 favorite things together to
     become a designer as well as a developer.
   </p>
+  <p>
+    I recently started streaming and recording videos on
+    <a href="https://www.youtube.com/channel/UCyvOaBoW3Jti69U4Gw1ci9Q">
+      Youtube
+    </a>
+    . I really enjoy teaching others all the awesome things I have learned. I
+    started a digital garden,
+    <a href="https://console-logs.netlify.app">Console Logs</a>
+    , as a place to keep all of my development notes. If you would like to get
+    in touch, you can reach me at the socials below or
+    <a href="contact">send me a message</a>
+    !.
+  </p>
 </div>
 
 <style>
