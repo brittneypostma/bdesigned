@@ -34,5 +34,6 @@
 
   .footer {
     align-self: flex-end;
+    z-index: 20;
   }
 </style>

@@ -30,7 +30,8 @@
 </div>
 
 <div
-  class="px-4 sm:px-0 text-wrapper grid justify-center content-center w-full"
+  class="center top-1/2 px-4 sm:px-0 text-wrapper grid justify-center
+  content-center w-full"
 >
   <p class="sm:text-2xl">HELLO!</p>
   <h1 class="mb-4 xs:mb-0 text-6xl">I'm Brittney,</h1>
@@ -43,7 +44,6 @@
 
 <style>
   .text-wrapper {
-    height: calc(100vh - 100px);
     color: var(--text-color);
   }
 
