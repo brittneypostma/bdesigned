@@ -23,7 +23,7 @@
   </div>
 
   <ul
-    class="{clicked ? 'absolute right-50 grid justify-center content-center bg-navy rounded-lg pb-8 px-4' : 'hidden lg:flex'}"
+    class="{clicked ? 'absolute right-50 grid justify-center content-center rounded-lg pb-8 px-4 mobile-menu' : 'hidden lg:flex'}"
   >
     <li>
       <a class="{segment === undefined ? 'page' : 'selected'}" href=".">home</a>

@@ -14,7 +14,8 @@ module.exports = {
       yellow: "#E5A91E",
       navy: "#1B2A49",
       gray: "#333333",
-      black: "#000000"
+      black: "#000000",
+      transparent: "transparent"
     },
     fontFamily: {
       heading: "'Pacifico', cursive",
@@ -28,10 +29,16 @@ module.exports = {
         100: "100px"
       },
       inset: {
-        50: "50px"
+        "1/2": "50%",
+        50: "50px",
+        100: "100px"
       }
     },
   },
-  variants: {},
+  variants: {
+    backgroundColor: ["responsive", "hover", "focus", "active"],
+    borderWidth: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+    scale: ['responsive', 'hover', 'focus', 'active', 'group-hover']
+  },
   plugins: [],
 }

@@ -63,7 +63,7 @@ button:focus {
 }
 
 p {
-  @apply text-xl;
+  @apply text-2xl;
 }
 
 @tailwind components;
@@ -87,16 +87,32 @@ p {
   --primary: var(--white);
   --secondary: var(--mint);
   --text-color: var(--teal);
+  --accent-color: var(--navy);
 }
 
 [data-theme="dark"] {
   --primary: var(--medium-blue);
   --secondary: var(--navy);
   --text-color: var(--light-blue);
+  --accent-color: var(--yellow);
 }
 
 .center {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(33, 47, 79, 0.5);
+}
+
+.mobile-menu {
+  background: linear-gradient(
+      180deg,
+      var(--medium-blue) 0%,
+      var(--navy) 100%
+    );
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(40px);
 }
