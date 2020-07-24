@@ -18,7 +18,7 @@
           <div class="content-overlay bg-navy bg-opacity-75"></div>
           <img src="{item.img}" alt="{item.alt}" />
           <div
-            class="content-details fadeIn-bottom text-teal md:text-sand
+            class="content-details fadeIn-bottom text-blue md:text-sand
             leading-relaxed"
           >
             <h4 class="content-title text-center">{item.alt}</h4>

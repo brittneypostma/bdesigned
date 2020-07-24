@@ -48,6 +48,7 @@ button {
   background: radial-gradient(128.2% 109.41% at 18.75% 15.91%, #00E0FF 0%, #00789E 100%);
   transition: all 0.3s linear;
   @apply shadow-xl;
+  @apply outline-none;
   @apply text-white;
   @apply rounded-full;
   @apply px-5;
