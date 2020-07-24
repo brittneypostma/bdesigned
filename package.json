@@ -1,19 +1,19 @@
 {
-	"name": "bdesigned",
-	"description": "portfolio for Brittney Postma - bDesigned",
-	"author": "Brittney Postma <bdesignedwebdev@gmail.com> (https://bdesigned.netlify.com)",
-	"keywords": [
-		"Brittney Postma",
-		"bDesigned",
-		"bdesigned",
-		"frontend developer",
-		"fullstack",
-		"portfolio"
-	],
-	"repository": "github:brittneypostma/bDesigned",
-	"bugs": "https://github.com/brittneypostma/bDesigned/issues",
-	"homepage": "https://bdesigned.netlify.com/",
-	"version": "0.0.3",
+  "name": "bdesigned",
+  "description": "portfolio for Brittney Postma - bDesigned",
+  "author": "Brittney Postma <bdesignedwebdev@gmail.com> (https://bdesigned.netlify.com)",
+  "keywords": [
+    "Brittney Postma",
+    "bDesigned",
+    "bdesigned",
+    "frontend developer",
+    "fullstack",
+    "portfolio"
+  ],
+  "repository": "github:brittneypostma/bDesigned",
+  "bugs": "https://github.com/brittneypostma/bDesigned/issues",
+  "homepage": "https://bdesigned.netlify.com/",
+  "version": "0.0.3",
   "scripts": {
     "dev": "run-p start:dev watch:css",
     "build": "npm run build:css && sapper build --legacy",
@@ -27,7 +27,6 @@
     "test": "run-p --race dev cy:run"
   },
   "dependencies": {
-    "@cloudinary/svelte": "0.0.1-alpha.1",
     "compression": "^1.7.1",
     "gray-matter": "^4.0.2",
     "marked": "^1.1.1",
