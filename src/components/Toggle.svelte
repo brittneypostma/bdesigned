@@ -27,7 +27,11 @@
   />
   <label class="theme-switch" for="checkbox">
     <input type="checkbox" id="checkbox" />
-    <div class="slider round" tabindex="0" role="slider"></div>
+    <div
+      class="slider round outline-none shadow-outline"
+      tabindex="0"
+      role="slider"
+    ></div>
   </label>
   <img
     class="slider-img"
