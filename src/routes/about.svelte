@@ -48,8 +48,7 @@
     <a href="https://console-logs.netlify.app">Console Logs</a>
     , as a place to keep all of my development notes. If you would like to get
     in touch, you can reach me at the socials below or
-    <a href="contact">send me a message</a>
-    !.
+    <a href="contact">send me a message</a>!
   </p>
 </div>
 
