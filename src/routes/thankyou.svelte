@@ -1,3 +1,8 @@
+<svelte:head>
+  <title>Thank You | bDesigned</title>
+</svelte:head>
+
+<h1 class="text-center my-12">Thank You</h1>
 <div class="container">
   <div id="envelope" class="envelope">
     <svg
@@ -11,11 +16,11 @@
       <polygon points="0,0 100,0 50,100"></polygon>
     </svg>
     <div class="thank">
-      Thank you!
-      <br />
-      I will get back to you soon!
+      Thank you for contacting me, I will get back to you soon!
       <a href=".">
-        <span class="btnText">Go Home</span>
+        <button aria-label="Link to home page" class="btnText w-full my-6">
+          Go Home
+        </button>
       </a>
     </div>
   </div>
@@ -24,7 +29,7 @@
 <style>
   .container {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     height: 75%;
     margin: 0 auto;
@@ -35,14 +40,14 @@
     position: relative;
     width: 40%;
     height: 500px;
-    background: radial-gradient(#222, #111) 0 50%;
-
+    background: var(--navy);
     display: grid;
     justify-items: center;
   }
+
   .flap {
     transition: 0.5s all linear;
-    fill: whitesmoke;
+    fill: var(--blue);
   }
 
   .thank {
@@ -54,13 +59,7 @@
     justify-content: stretch;
     align-content: flex-end;
     text-align: center;
-    letter-spacing: 5px;
     font-size: 4vh;
-    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5),
-      3px 3px 3px rgba(0, 0, 0, 0.8), 0px 0px 1px #111,
-      #333 0.006em 0.006em 0.007em, #9c9c9c 1px 1px 1px;
-    font-style: italic;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
 
   @keyframes fade-in {
@@ -74,34 +73,6 @@
     }
   }
 
-  .btnText {
-    color: rgb(226, 226, 226);
-    text-shadow: 2px 2px 2px rgba(36, 36, 36, 0.5),
-      3px 3px 3px rgba(0, 0, 0, 0.8), 0px 0px 1px #111,
-      #333 0.006em 0.006em 0.007em, #9c9c9c 1px 1px 1px;
-  }
-
-  a {
-    margin-bottom: 10px;
-    position: relative;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-decoration: none;
-    text-align: center;
-    width: 100%;
-    font-size: 4vh;
-    width: 100%;
-    height: 6vh;
-    border-radius: 0.2em;
-    background-image: linear-gradient(
-      rgb(0, 255, 255, 0.6),
-      rgb(0, 255, 255, 0.9),
-      rgb(0, 255, 255, 0.6)
-    );
-    color: #bbb;
-    letter-spacing: 1px;
-    animation: slow-fade 2s ease-in;
-  }
-
   @keyframes slow-fade {
     from {
       scale: 0;
@@ -113,9 +84,6 @@
     }
   }
 
-  a:hover {
-    background-image: linear-gradient(to top, #00ffff, transparent 10%);
-  }
   @media only screen and (max-width: 600px) {
     .thank {
       font-size: 3vh;

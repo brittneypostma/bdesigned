@@ -33,12 +33,17 @@
   class="center top-1/2 px-4 sm:px-0 text-wrapper grid justify-center
   content-center w-full"
 >
-  <p class="sm:text-2xl">HELLO!</p>
+  <p class="sm:text-2xl" role="heading">HELLO!</p>
   <h1 class="mb-4 xs:mb-0 text-6xl">I'm Brittney,</h1>
   <p class="sm:text-2xl">owner of bDesigned.</p>
   <p class="text-4xl sm:text-5xl">I'm a {changingText[idx]}</p>
   <a href="portfolio">
-    <button class="text-2xl cursor-pointer w-full">SEE MY WORK</button>
+    <button
+      aria-label="Links to portfolio page."
+      class="text-2xl cursor-pointer w-full"
+    >
+      SEE MY WORK
+    </button>
   </a>
 </div>
 
