@@ -1,12 +1,13 @@
 <script>
   import { items } from '../data/portfolio.js'
+  import { fade } from 'svelte/transition'
 </script>
 
 <svelte:head>
   <title>Portfolio | bDesigned</title>
 </svelte:head>
 
-<div class="cont p-0 sm:p-12">
+<div in:fade="{{ duration: 1000 }}" class="cont p-0 sm:p-12">
   <h1 class="ml-6">Portfolio</h1>
   <div class="blocks mt-6 md:mt-12">
     {#each items as item}

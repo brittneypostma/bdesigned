@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte'
+  import { fly } from 'svelte/transition'
 
   const changingText = [
     'Developer.',
@@ -30,6 +31,7 @@
 </div>
 
 <div
+  in:fly="{{ y: -500, duration: 700 }}"
   class="center top-1/2 px-4 sm:px-0 text-wrapper grid justify-center
   content-center w-full"
 >

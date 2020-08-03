@@ -1,3 +1,7 @@
+<script>
+  import { fly } from 'svelte/transition'
+</script>
+
 <svelte:head>
   <title>About | bDesigned</title>
 </svelte:head>
@@ -7,7 +11,10 @@
   alt="wave"
   class="hidden lg:block fixed bottom-0 right-0 z-0"
 />
-<div class="text-wrapper p-12 lg:max-w-md xl:max-w-6xl h-full">
+<div
+  in:fly="{{ y: 500, duration: 700 }}"
+  class="text-wrapper p-12 lg:max-w-md xl:max-w-6xl h-full"
+>
   <h1>About Me</h1>
   <img
     src="me.png"
@@ -48,7 +55,8 @@
     <a href="https://console-logs.netlify.app">Console Logs</a>
     , as a place to keep all of my development notes. If you would like to get
     in touch, you can reach me at the socials below or
-    <a href="contact">send me a message</a>!
+    <a href="contact">send me a message</a>
+    !
   </p>
 </div>
 

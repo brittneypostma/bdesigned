@@ -10,13 +10,14 @@
 
 <script>
   export let posts
+  import { fade } from 'svelte/transition'
 </script>
 
 <svelte:head>
   <title>Blog | bDesigned</title>
 </svelte:head>
 
-<div class="p-12">
+<div class="p-12" in:fade="{{ duration: 1000 }}">
   <h1 class="mb-12">Blog</h1>
 
   <ul>
