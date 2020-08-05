@@ -1,5 +1,29 @@
 <script>
   import { fly } from 'svelte/transition'
+
+  const loaded = new Map()
+
+  let visible = false
+
+  function lazy(node, data) {
+    if (loaded.has(data.src)) {
+      node.setAttribute('src', data.src)
+    } else {
+      // simulate slow loading network
+      setTimeout(() => {
+        const img = new Image()
+        img.src = data.src
+        img.onload = () => {
+          loaded.set(data.src, img)
+          node.setAttribute('src', data.src)
+        }
+      }, 2000)
+    }
+
+    return {
+      destroy() {}, // noop
+    }
+  }
 </script>
 
 <svelte:head>
@@ -7,6 +31,7 @@
 </svelte:head>
 
 <img
+  use:lazy="{{ src: 'wave.png' }}"
   src="wave.png"
   alt="wave"
   class="hidden lg:block fixed bottom-0 right-0 z-0"
@@ -17,6 +42,7 @@
 >
   <h1>About Me</h1>
   <img
+    use:lazy="{{ src: 'me.png' }}"
     src="me.png"
     alt="Brittney"
     class="rounded-full shadow-outline lg:float-left mt-10 lg:m-12"

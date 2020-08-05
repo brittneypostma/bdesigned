@@ -1,6 +1,30 @@
 <script>
   import { items } from '../data/portfolio.js'
   import { fade } from 'svelte/transition'
+
+  const loaded = new Map()
+
+  let visible = false
+
+  function lazy(node, data) {
+    if (loaded.has(data.src)) {
+      node.setAttribute('src', data.src)
+    } else {
+      // simulate slow loading network
+      setTimeout(() => {
+        const img = new Image()
+        img.src = data.src
+        img.onload = () => {
+          loaded.set(data.src, img)
+          node.setAttribute('src', data.src)
+        }
+      }, 2000)
+    }
+
+    return {
+      destroy() {}, // noop
+    }
+  }
 </script>
 
 <svelte:head>
@@ -17,7 +41,11 @@
       >
         <a href="{item.link}">
           <div class="content-overlay bg-navy bg-opacity-75"></div>
-          <img src="{item.img}" alt="{item.alt}" />
+          <img
+            use:lazy="{{ src: item.image }}"
+            src="{item.img}"
+            alt="{item.alt}"
+          />
           <div
             class="content-details fadeIn-bottom text-blue md:text-sand
             leading-relaxed"

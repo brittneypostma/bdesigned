@@ -70,6 +70,16 @@ p {
 @tailwind components;
 @tailwind utilities;
 
+@font-face{
+  font-family: 'Quicksand';
+  src: url('/fonts/quicksand.woff2') format('woff2');
+}
+
+@font-face{
+  font-family: 'Pacifico';
+  src: url('/fonts/pacifico.woff2') format('woff2');
+}
+
 :root {
   --white: #fff;
   --mint: #AEEADE;
