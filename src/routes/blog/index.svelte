@@ -11,6 +11,30 @@
 <script>
   export let posts
   import { fade } from 'svelte/transition'
+
+  const loaded = new Map()
+
+  let visible = false
+
+  function lazy(node, data) {
+    if (loaded.has(data.src)) {
+      node.setAttribute('src', data.src)
+    } else {
+      // simulate slow loading network
+      setTimeout(() => {
+        const img = new Image()
+        img.src = data.src
+        img.onload = () => {
+          loaded.set(data.src, img)
+          node.setAttribute('src', data.src)
+        }
+      }, 2000)
+    }
+
+    return {
+      destroy() {}, // noop
+    }
+  }
 </script>
 
 <svelte:head>
@@ -25,6 +49,7 @@
       <li class="rounded-lg leading-relaxed relative bezier">
         <a rel="prefetch" href="blog/{post.slug}">
           <img
+            use:lazy="{{ src: post.image }}"
             src="{post.image}"
             alt="{post.alt}"
             class="rounded-lg object-cover object-center"
