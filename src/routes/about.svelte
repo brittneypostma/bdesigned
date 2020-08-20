@@ -1,5 +1,6 @@
 <script>
   import { fly } from 'svelte/transition'
+  import Image from 'svelte-image'
 
   const loaded = new Map()
 

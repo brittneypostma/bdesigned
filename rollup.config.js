@@ -8,6 +8,7 @@ import config from 'sapper/config/rollup.js'
 import pkg from './package.json'
 import sveltePreprocess from 'svelte-preprocess'
 import dotenv from 'dotenv'
+// import image from 'svelte-image'
 
 dotenv.config();
 
@@ -20,14 +21,18 @@ const onwarn = (warning, onwarn) =>
     /[/\\]@sapper[/\\]/.test(warning.message)) ||
   onwarn(warning)
 
-const preprocess = sveltePreprocess({
-  postcss: {
-    plugins: [
-      require('postcss-import')(),
-      require('postcss-nested')()
-    ]
-  }
-});
+const preprocess = [
+  // image({
+  //   placeholder: 'blur', optimizeRemote: true
+  // }),
+  sveltePreprocess({
+    postcss: {
+      plugins: [
+        require('postcss-import')(),
+        require('postcss-nested')()
+      ]
+    }
+  })];
 
 export default {
   client: {
