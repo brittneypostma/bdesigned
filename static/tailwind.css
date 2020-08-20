@@ -57,6 +57,11 @@ button {
 
 button:hover {
   @apply shadow-sm;
+  background: radial-gradient(
+    128.2% 109.41% at 18.75% 15.91%,
+    #00e1ff 0%,
+    #049cca 100%
+  );
 }
 
 button:focus {
