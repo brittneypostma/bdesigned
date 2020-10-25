@@ -7,7 +7,7 @@
   class="shadow-inset fixed top-0 w-full h-100 flex justify-between items-center
   bg px-10 z-50"
 >
-  <img src="logo-full.png" alt="bDesigned logo" />
+  <a href="/"><img src="logo-full.png" alt="bDesigned logo" /></a>
   <Nav {segment} />
 </header>
 

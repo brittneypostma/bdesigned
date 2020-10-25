@@ -14,13 +14,6 @@ export const items = [
     "link": "https://go-go-gatsby.netlify.app/"
   },
   {
-    "id": 3,
-    "img": "portfolio/ramen.png",
-    "alt": "Keiko Ramen",
-    "desc": "A mock restaurant with cart and online ordering. Built with Gatsby and Stripe.",
-    "link": "https://keiko-ramen.netlify.app/"
-  },
-  {
     "id": 4,
     "img": "portfolio/zoo.png",
     "alt": "Volunteer Check In System",

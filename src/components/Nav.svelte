@@ -59,6 +59,11 @@
       <a class="{segment === 'contact' ? 'page' : 'selected'}" href="contact">
         contact
       </a>
+    </li>    
+    <li>
+      <a class="{segment === 'contact' ? 'page' : 'selected'}" href="https://console-logs.netlify.app/">
+        console-logs
+      </a>
     </li>
     <Toggle />
   </ul>

@@ -47,11 +47,11 @@
             alt="{item.alt}"
           />
           <div
-            class="content-details fadeIn-bottom text-blue md:text-sand
+            class="content-details fadeIn-bottom text-navy md:text-sand
             leading-relaxed"
           >
             <h4 class="content-title text-center">{item.alt}</h4>
-            <p class="text-left md:text-center">{item.desc}</p>
+            <p class="text-center">{item.desc}</p>
           </div>
         </a>
       </div>
@@ -66,12 +66,13 @@
 
   @media only screen and (min-width: 768px) {
     .blocks {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-      grid-gap: 1em;
       padding: 0;
-      align-items: center;
-      justify-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .content {
+      flex: 1 1 500px;
     }
     .content-details {
       position: absolute;
