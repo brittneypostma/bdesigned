@@ -49,7 +49,7 @@
     class="rounded-full shadow-outline lg:float-left mt-10 lg:m-12"
   />
   <p>
-    Hi, I'm Brittney and I'm the developer and designer behind bDesigned. I love developing beautiful, fluid, and responsive websites using new technologies. I thrive on accessible, semantic HTML that also has personality. I want everyone to be included on my websites, but also have some fun!
+    Hi, I'm Brittney and I'm the developer and designer behind bDesigned. I am a self-taught developer and learned a lot from the <a href="https://academy.zerotomastery.io/?affcode=441520_gjue7n-1">ZTM Academy</a>. I recently joined the other great instructors there and lead a workshop on Responsive Web Design. I love developing beautiful, fluid, and responsive websites using new technologies. I thrive on accessible, semantic HTML that also has personality. I want everyone to be included on my websites, but also have some fun!
   </p>
   <p>
     I use Figma to create design systems, mockups, and clickable prototypes. User experience is extremely important to me and I strive to have a low user misery rating. I also use Photoshop like tools to create logos and high quality SVG icons and designs.
