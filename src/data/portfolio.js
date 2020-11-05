@@ -24,7 +24,7 @@ export const items = [
     "img": "portfolio/piano.png",
     "alt": "JS Piano",
     "desc": "A piano that plays notes by clicking or pressing letters on the keyboard. Built with HTML, CSS, and JS.",
-    "link": ""
+    "link": "https://brittneypostma.github.io/piano/"
   },
   {
     "id": 6,
