@@ -1,12 +1,13 @@
 <script>
   import ThankYou from './thankyou.svelte'
+  import { fade } from 'svelte/transition'
 </script>
 
 <svelte:head>
   <title>Contact | bDesigned</title>
 </svelte:head>
 
-<div>
+<div in:fade="{{ duration: 1000 }}">
   <h1 class="text-center my-12">Contact Me</h1>
   <div class="container">
     <div id="envelope" class="envelope">

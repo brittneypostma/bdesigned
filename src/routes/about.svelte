@@ -4,8 +4,6 @@
 
   const loaded = new Map()
 
-  let visible = false
-
   function lazy(node, data) {
     if (loaded.has(data.src)) {
       node.setAttribute('src', data.src)
@@ -39,19 +37,20 @@
 />
 <div
   in:fly="{{ y: 500, duration: 700 }}"
-  class="text-wrapper p-12 lg:max-w-md xl:max-w-6xl h-full"
+  class="p-12 lg:max-w-md xl:max-w-6xl h-full text-wrapper"
 >
   <h1>About Me</h1>
   <img
     use:lazy="{{ src: 'me.png' }}"
-    src="me.png"
+    src="bg.png"
     alt="Brittney"
-    class="rounded-full shadow-outline lg:float-left mt-10 lg:m-12"
+    class="rounded-full shadow-2xl lg:float-left mt-10 lg:m-12"
   />
   <p>
-    Hi, I'm Brittney and I'm the developer and designer behind bDesigned. I am a self-taught developer and learned a lot from the <a href="https://academy.zerotomastery.io/?affcode=441520_gjue7n-1">ZTM Academy</a>. I recently joined the other great instructors there and lead a workshop on Responsive Web Design. I love developing beautiful, fluid, and responsive websites using new technologies. I thrive on accessible, semantic HTML that also has personality. I want everyone to be included on my websites, but also have some fun!
+    I'm Brittney Postma, the developer and designer behind bDesigned. I have a background in graphic design and more recently found my passion for coding. I taught myself through the <a href="https://academy.zerotomastery.io/?affcode=441520_gjue7n-1">ZTM Academy</a> while being a stay at home mom to my 3 wonderful kids. I am a star mentor in the ZTM Discord community and recently joined the other great instructors at the Academy.  I did a live workshop on Responsive Web Design that is available to all Academy students now! 
   </p>
   <p>
+    I love developing beautiful, fluid, and responsive websites using new technologies. I thrive on accessible, semantic HTML that also has personality. I want everyone to be included on my websites, but also have some fun!
     I use Figma to create design systems, mockups, and clickable prototypes. User experience is extremely important to me and I strive to have a low user misery rating. I also use Photoshop like tools to create logos and high quality SVG icons and designs.
   </p>
   <p>
@@ -59,12 +58,13 @@
     Native, Python, GraphQL, and SQL and NoSQL databases. 
   </p>
   <p>
+    I created my own VSCode theme, <a href="https://marketplace.visualstudio.com/items?itemName=bDesigned.deep-water">Deep Water</a>, based on the colors of the ocean, and wrote about the process over at <a href="https://dev.to/bdesigned/build-a-vscode-theme-3f4i">dev.to</a>.
     I stream and record videos on
     <a href="https://www.youtube.com/channel/UCyvOaBoW3Jti69U4Gw1ci9Q">
       Youtube
-    </a>. I really enjoy teaching others all the awesome things I have learned. I
+    </a> and really enjoy teaching others all the awesome things I have learned. I
     started a digital garden,
-    <a href="https://console-logs.netlify.app">Console Logs</a>
+    <a href="theconsolelogs.com">The Console Logs</a>
     , as a place to keep all of my development notes. If you would like to get in touch, you can reach me at the socials below or
     <a href="contact">send me a message</a>
     !
@@ -72,11 +72,12 @@
 </div>
 
 <style>
+  .text-wrapper {
+    color: var(--about-text);
+  }
+
   img {
     z-index: -10;
-  }
-  .text-wrapper {
-    color: var(--text-color);
   }
 
   p:not(:nth-child(2)) {

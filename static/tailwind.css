@@ -98,12 +98,14 @@ p {
   --yellow: #E5A91E;
   --navy: #1B2A49;
   --gray: #333333;
+  --green: #4b9139;
   --black: #000000;
   
   --primary: var(--white);
   --secondary: var(--mint);
   --text-color: var(--teal);
-  --accent-color: var(--navy);
+  --accent-color: var(--green);
+  --about-text: var(--teal);
 }
 
 [data-theme="dark"] {
@@ -111,6 +113,7 @@ p {
   --secondary: var(--navy);
   --text-color: var(--light-blue);
   --accent-color: var(--yellow);
+  --about-text: var(--light-blue);
 }
 
 .bezier {

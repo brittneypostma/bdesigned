@@ -12,6 +12,7 @@
     bind:checked="{clicked}"
     on:click="{() => (clicked = !clicked)}"
   />
+ 
   <div class="nav-btn flex item">
     <label for="nav-check">
       <img
@@ -67,6 +68,7 @@
     </li>
     <Toggle />
   </ul>
+
 </nav>
 
 <style>
