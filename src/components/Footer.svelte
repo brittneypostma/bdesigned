@@ -39,6 +39,14 @@
   >
     <img src="youtube.png" alt="youtube" />
   </a>
+  <a
+  aria-label="opens dev.to profile in new tab"
+  href="https://dev.to/bdesigned"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  <img src="dev.png" alt="dev" />
+</a>
 </footer>
 
 <style>

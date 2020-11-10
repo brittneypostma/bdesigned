@@ -67,10 +67,10 @@
     width: 350px;
     height: 200px;
   }
-  /* 
-  li:hover {
-    top: -2px;
-  } */
+  p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
   @media only screen and (min-width: 768px) {
     ul {
       display: grid;

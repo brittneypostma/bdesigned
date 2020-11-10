@@ -98,6 +98,9 @@
 </div>
 
 <style>
+  input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    box-shadow: 0 0 0 3px var(--yellow);
+  }
   .thanks {
     display: none;
   }
