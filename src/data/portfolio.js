@@ -2,16 +2,16 @@ export const items = [
   {
     "id": 1,
     "img": "portfolio/logs.png",
-    "alt": "Console Logs",
-    "desc": "A digital garden. Built with Sapper.",
+    "alt": "The Console Logs",
+    "desc": "A place for all my bytes of programming related knowledge. Built with Sapper.",
     "link": "https://console-logs.netlify.app/"
   },
   {
     "id": 2,
-    "img": "portfolio/gatsby.png",
-    "alt": "Gatsby Blog",
-    "desc": "A blog and portfolio site. Built with Gatsby.",
-    "link": "https://go-go-gatsby.netlify.app/"
+    "img": "portfolio/toovoo.png",
+    "alt": "Töövoo",
+    "desc": "Töövoo means workflow in Estonian and that's exactly what this app does. A todo list with integrated pomodoro timers, motivational quotes, news, and weather, built with Svelte.",
+    "link": "https://toovoo.netlify.app/"
   },
   {
     "id": 4,
