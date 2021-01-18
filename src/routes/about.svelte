@@ -1,6 +1,5 @@
 <script>
   import { fly } from 'svelte/transition'
-  import Image from 'svelte-image'
 
   const loaded = new Map()
 
@@ -33,18 +32,18 @@
   use:lazy="{{ src: 'wave.png' }}"
   src="wave.png"
   alt="wave"
-  class="hidden lg:block fixed bottom-0 right-0 z-0"
+  class="fixed bottom-0 right-0 z-0 hidden lg:block"
 />
 <div
   in:fly="{{ y: 500, duration: 700 }}"
-  class="p-12 lg:max-w-md xl:max-w-6xl h-full text-wrapper"
+  class="h-full p-12 lg:max-w-md xl:max-w-6xl text-wrapper"
 >
   <h1>About Me</h1>
   <img
     use:lazy="{{ src: 'me.png' }}"
     src="bg.png"
     alt="Brittney"
-    class="rounded-full shadow-2xl lg:float-left mt-10 lg:m-12"
+    class="mt-10 rounded-full shadow-2xl lg:float-left lg:m-12"
   />
   <p>
     I'm Brittney Postma, the developer and designer behind bDesigned. I have a background in graphic design and more recently found my passion for coding. I taught myself through the <a href="https://academy.zerotomastery.io/?affcode=441520_gjue7n-1">ZTM Academy</a> while being a stay at home mom to my 3 wonderful kids. I am a star mentor in the ZTM Discord community and recently joined the other great instructors at the Academy.  I did a live workshop on Responsive Web Design that is available to all Academy students now! 

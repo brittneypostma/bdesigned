@@ -13,12 +13,12 @@
     on:click="{() => (clicked = !clicked)}"
   />
  
-  <div class="nav-btn flex item">
+  <div class="flex nav-btn item">
     <label for="nav-check">
       <img
         src="hamburger.svg"
         alt="nav menu button"
-        class="lg:hidden cursor-pointer"
+        class="cursor-pointer lg:hidden"
       />
     </label>
   </div>
@@ -27,12 +27,13 @@
     class="{clicked ? 'absolute right-50 grid justify-center content-center rounded-lg pb-8 px-4 mobile-menu' : 'hidden lg:flex'}"
   >
     <li>
-      <a class="{segment === undefined ? 'page' : 'selected'}" href=".">home</a>
+      <a class="{segment === undefined ? 'page' : 'selected'}" href="." on:click="{() => (clicked = !clicked)}">home</a>
     </li>
     <li>
       <a
         rel="prefetch"
         class="{segment === 'about' ? 'page' : 'selected'}"
+        on:click="{() => (clicked = !clicked)}"
         href="about"
       >
         about
@@ -42,6 +43,7 @@
       <a
         rel="prefetch"
         class="{segment === 'portfolio' ? 'page' : 'selected'}"
+        on:click="{() => (clicked = !clicked)}"
         href="portfolio"
       >
         portfolio
@@ -51,18 +53,23 @@
       <a
         rel="prefetch"
         class="{segment === 'blog' ? 'page' : 'selected'}"
+        on:click="{() => (clicked = !clicked)}"
         href="blog"
       >
         blog
       </a>
     </li>
     <li>
-      <a class="{segment === 'contact' ? 'page' : 'selected'}" href="contact">
+      <a 
+      rel="prefetch" 
+      class="{segment === 'contact' ? 'page' : 'selected'}" 
+      on:click="{() => (clicked = !clicked)}" 
+      href="contact">
         contact
       </a>
     </li>   
     <li>
-      <a href="https://console-logs.netlify.app/">
+      <a href="https://console-logs.netlify.app/" on:click="{() => (clicked = !clicked)}">
         console-logs
       </a>
     </li>
