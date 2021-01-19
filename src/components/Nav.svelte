@@ -2,6 +2,12 @@
   import Toggle from './Toggle.svelte'
   export let segment
   let clicked = false
+  let mobile = false
+
+  function openNav() {
+    mobile = true
+    clicked = !clicked
+  }
 </script>
 
 <nav>
@@ -10,7 +16,7 @@
     id="nav-check"
     class="hidden"
     bind:checked="{clicked}"
-    on:click="{() => (clicked = !clicked)}"
+    on:click="{openNav}"
   />
  
   <div class="flex nav-btn item">
@@ -27,13 +33,13 @@
     class="{clicked ? 'absolute right-50 grid justify-center content-center rounded-lg pb-8 px-4 mobile-menu' : 'hidden lg:flex'}"
   >
     <li>
-      <a class="{segment === undefined ? 'page' : 'selected'}" href="." on:click="{() => (clicked = !clicked)}">home</a>
+      <a class="{segment === undefined ? 'page' : 'selected'}" href="." >home</a>
     </li>
     <li>
       <a
         rel="prefetch"
         class="{segment === 'about' ? 'page' : 'selected'}"
-        on:click="{() => (clicked = !clicked)}"
+        on:click={() => mobile ? openNav() : undefined}
         href="about"
       >
         about
@@ -43,7 +49,7 @@
       <a
         rel="prefetch"
         class="{segment === 'portfolio' ? 'page' : 'selected'}"
-        on:click="{() => (clicked = !clicked)}"
+        on:click={() => mobile ? openNav() : undefined}
         href="portfolio"
       >
         portfolio
@@ -53,7 +59,7 @@
       <a
         rel="prefetch"
         class="{segment === 'blog' ? 'page' : 'selected'}"
-        on:click="{() => (clicked = !clicked)}"
+        on:click={() => mobile ? openNav() : undefined}
         href="blog"
       >
         blog
@@ -63,13 +69,13 @@
       <a 
       rel="prefetch" 
       class="{segment === 'contact' ? 'page' : 'selected'}" 
-      on:click="{() => (clicked = !clicked)}" 
+     on:click={() => mobile ? openNav() : undefined}
       href="contact">
         contact
       </a>
     </li>   
     <li>
-      <a href="https://console-logs.netlify.app/" on:click="{() => (clicked = !clicked)}">
+      <a href="https://console-logs.netlify.app/">
         console-logs
       </a>
     </li>
