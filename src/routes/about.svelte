@@ -36,7 +36,7 @@
 />
 <div
   in:fly="{{ y: 500, duration: 700 }}"
-  class="h-full p-12 lg:max-w-md xl:max-w-6xl text-wrapper"
+  class="h-full p-12 lg:max-w-md xl:max-w-6xl 2xl:mx-auto text-wrapper"
 >
   <h1>About Me</h1>
   <img
@@ -63,7 +63,7 @@
       Youtube
     </a> and really enjoy teaching others all the awesome things I have learned. I
     started a digital garden,
-    <a href="theconsolelogs.com">The Console Logs</a>
+    <a href="https://www.theconsolelogs.com/">The Console Logs</a>
     , as a place to keep all of my development notes. If you would like to get in touch, you can reach me at the socials below or
     <a href="contact">send me a message</a>
     !

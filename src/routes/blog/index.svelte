@@ -41,18 +41,18 @@
   <title>Blog | bDesigned</title>
 </svelte:head>
 
-<div class="p-12" in:fade="{{ duration: 1000 }}">
+<div class="p-12 mx-auto max-w-7xl" in:fade="{{ duration: 1000 }}">
   <h1 class="mb-12">Blog</h1>
 
-  <ul>
+  <ul class="flex flex-wrap justify-around gap-8">
     {#each posts as post}
-      <li class="rounded-lg leading-relaxed relative bezier">
+      <li class="relative leading-relaxed rounded-lg bezier">
         <a rel="prefetch" href="blog/{post.slug}">
           <img
             use:lazy="{{ src: post.image }}"
             src="{post.image}"
             alt="{post.alt}"
-            class="rounded-lg object-cover object-center"
+            class="object-cover rounded-lg" 
           />
           <h4>{post.title}</h4>
           <p>{post.date}</p>
@@ -70,12 +70,5 @@
   p {
     margin-top: 0.5rem;
     font-size: 1rem;
-  }
-  @media only screen and (min-width: 768px) {
-    ul {
-      display: grid;
-      gap: 25px;
-      grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
-    }
   }
 </style>

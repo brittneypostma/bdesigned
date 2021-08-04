@@ -31,26 +31,24 @@
   <title>Portfolio | bDesigned</title>
 </svelte:head>
 
-<div in:fade="{{ duration: 1000 }}" class="cont p-0 sm:p-12">
+<div in:fade="{{ duration: 1000 }}" class="p-0 cont sm:p-12 2xl:mx-auto max-w-8xl">
   <h1 class="ml-6">Portfolio</h1>
-  <div class="blocks mt-6 md:mt-12">
+  <div class="mt-6 blocks md:mt-12">
     {#each items as item}
       <div
-        class="content grid md:relative my-10 md:m-0 md:p-0 md:overflow-hidden
-        rounded-lg"
+        class="grid my-10 rounded-lg content md:relative md:m-0 md:p-0 md:overflow-hidden"
       >
         <a href="{item.link}">
-          <div class="content-overlay bg-navy bg-opacity-75"></div>
+          <div class="bg-opacity-75 content-overlay bg-navy"></div>
           <img
             use:lazy="{{ src: item.image }}"
             src="{item.img}"
             alt="{item.alt}"
           />
           <div
-            class="content-details fadeIn-bottom text-navy md:text-sand
-            leading-relaxed"
+            class="leading-relaxed content-details fadeIn-bottom text-navy md:text-sand"
           >
-            <h4 class="content-title text-center">{item.alt}</h4>
+            <h4 class="text-center content-title">{item.alt}</h4>
             <p class="text-center">{item.desc}</p>
           </div>
         </a>

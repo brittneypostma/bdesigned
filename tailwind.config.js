@@ -32,6 +32,13 @@ module.exports = {
         "1/2": "50%",
         50: "50px",
         100: "100px"
+      },
+      maxWidth: {
+        '7xl': '80rem',
+        '8xl': '2000px'
+      },
+      screens: {
+        '2xl': '1600px'
       }
     },
   },
