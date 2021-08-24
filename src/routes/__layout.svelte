@@ -2,13 +2,12 @@
 	import '@styles/global.css'
 	import Header from '../components/Header.svelte'
 	import Footer from '../components/Footer.svelte'
-	export let segment
 
 </script>
 
 <div class="wrapper">
 	<div class="header">
-		<Header {segment} />
+		<Header />
 	</div>
 
 	<main>

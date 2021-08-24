@@ -1,6 +1,6 @@
 <script>
 	import Toggle from './Toggle.svelte'
-	export let segment
+	import { page } from '$app/stores'
 	let clicked = false
 	let mobile = false
 
@@ -22,11 +22,11 @@
 
 	<ul
 		class={clicked ? 'absolute right-50 grid justify-center content-center rounded-lg pb-8 px-4 mobile-menu' : 'hidden lg:flex'}>
-		<li><a class={segment === undefined ? 'page' : 'selected'} href=".">home</a></li>
+		<li><a class={$page.path === '/' ? 'page' : 'selected'} href=".">home</a></li>
 		<li>
 			<a
 				rel="prefetch"
-				class={segment === 'about' ? 'page' : 'selected'}
+				class={$page.path === '/about' ? 'page' : 'selected'}
 				on:click={() => (mobile ? openNav() : undefined)}
 				href="about">
 				about
@@ -35,7 +35,7 @@
 		<li>
 			<a
 				rel="prefetch"
-				class={segment === 'portfolio' ? 'page' : 'selected'}
+				class={$page.path === '/portfolio' ? 'page' : 'selected'}
 				on:click={() => (mobile ? openNav() : undefined)}
 				href="portfolio">
 				portfolio
@@ -44,7 +44,7 @@
 		<li>
 			<a
 				rel="prefetch"
-				class={segment === 'contact' ? 'page' : 'selected'}
+				class={$page.path === '/contact' ? 'page' : 'selected'}
 				on:click={() => (mobile ? openNav() : undefined)}
 				href="contact">
 				contact
